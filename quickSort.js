@@ -1,7 +1,3 @@
-/* 
-Quicksort is another sorting algorithm with O(nlog(n)) best and average-case performance, although it is O(n^2) in the worst case. Despite this, quicksort is more commonly used than merge sort, as it is more cache-efficient and can easily be performed in place (i.e., without additional memory allocations).
- */
-
 function quickSort(array, start = 0, end = array.length) {
 	if (start >= end) {
 		return array;
@@ -11,12 +7,6 @@ function quickSort(array, start = 0, end = array.length) {
 	array = quickSort(array, middle + 1, end);
 	return array;
 }
-
-/* 
-Quicksort again uses a divide and conquer approach. You partition the array into 2 halves around a pivot value. All of the values which are less than the pivot value go to 1 half of the array, and all of the values which are greater than the pivot go to the other half of the array. You then recursively sort the 2 halves of the array until the halves are of length 0 or 1.
-
-There are different partitioning algorithms. A common in-place algorithm is Lomuto's algorithm:
- */
 
 function partition(array, start, end) {
 	const pivot = array[end - 1];
@@ -30,7 +20,3 @@ function partition(array, start, end) {
 	swap(array, end - 1, j);
 	return j;
 }
-
-/* 
-The pivot is the final value in the array. You loop through the array, swapping values as you go to put them on either side of the pivot point. And finally, you put the pivot into the correct place in the array.
-*/
