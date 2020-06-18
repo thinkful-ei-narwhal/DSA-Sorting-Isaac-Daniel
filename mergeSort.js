@@ -33,3 +33,5 @@ function merge(left, right, array) {
 	}
 	return array;
 }
+
+module.exports = mergeSort;
